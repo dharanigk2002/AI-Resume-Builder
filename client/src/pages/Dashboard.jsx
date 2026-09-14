@@ -206,7 +206,11 @@ export default function Dashboard() {
 
         {/* Create resume */}
         <Modal title="Create a Resume" ref={createResumeModal}>
-          <form onSubmit={createResume}>
+          <form
+            onSubmit={(e) =>
+              toast.promise(createResume(e), { loading: "Creating..." })
+            }
+          >
             <input
               type="text"
               name="title"

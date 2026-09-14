@@ -47,13 +47,13 @@ export default function ResumeBuilder() {
     _id: "",
     userId: "",
     title: "",
-    public: true,
+    public: false,
     professional_summary: "",
     skills: [],
     experience: [],
     education: [],
-    template: "",
-    accent_color: "",
+    template: "classic",
+    accent_color: "#3BF286",
     project: [],
     updatedAt: "",
     createdAt: "",
@@ -132,8 +132,8 @@ export default function ResumeBuilder() {
   }
 
   async function saveResume(e) {
-    e.preventDefault();
     try {
+      e.preventDefault();
       const updatedResume = JSON.parse(JSON.stringify(resumeData));
       if (typeof resumeData.personal_info.image === "object") {
         delete updatedResume.personal_info.image;
@@ -300,8 +300,8 @@ export default function ResumeBuilder() {
                 )}
               </div>
               <button
-                onClick={() =>
-                  toast.promise(saveResume, { loading: "Saving..." })
+                onClick={(e) =>
+                  toast.promise(saveResume(e), { loading: "Saving..." })
                 }
                 className="bg-linear-to-br from-green-100 to-gray-200 ring-gray-300 text-green-600 ring hover:ring-gray-400 transition-all rounded-md px-6 py-2 mt-6 text-sm"
               >

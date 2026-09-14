@@ -9,6 +9,7 @@ const colors = [
   { name: "Charcoal", value: "#374151" },
   { name: "Teal", value: "#0F766E" },
   { name: "Forest Green", value: "#166534" },
+  { name: "Green", value: "#3BF286" },
   { name: "Indigo", value: "#4338CA" },
   { name: "Burgundy", value: "#9F1239" },
   { name: "Brown", value: "#92400E" },
