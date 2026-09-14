@@ -38,7 +38,7 @@ const resumeSchema = new mongoose.Schema(
     },
     accent_color: {
       type: String,
-      default: "#3bf286",
+      default: "#3Bf286",
     },
     professional_summary: {
       type: String,
